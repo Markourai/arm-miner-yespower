@@ -1,11 +1,17 @@
-# SUGARMAKER
-![GitHub All Releases](https://img.shields.io/github/downloads/decryp2kanon/sugarmaker/total)
+# Yenten ARM miner (yespowerr16 algo)
 
-This is a multi-threaded CPU miner for ***Sugarchain***, fork of solardiz's (Resistance) fork of pooler's (Litecoin) fork of Jeff Garzik's (Bitcoin) reference cpuminer. This fork is supporting only Yespower variant algorithms.
+cmd for test Yenten mining:
+```
+sugarmaker.exe -a yespowerr16 -o stratum+tcp://cpu-pool.com:63368 -u wallet_address
+```
+
+![GitHub All Releases](https://img.shields.io/github/downloads/yentencoin/yenten-arm-miner-yespowerr16/total)
+
+This is a multi-threaded CPU miner for ***Yenten Coin***, fork of sugarmaker, fork of solardiz's (Resistance) fork of pooler's (Litecoin) fork of Jeff Garzik's (Bitcoin) reference cpuminer. This fork is supporting only Yespower variant algorithms.
 
 License:  [GPLv2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).  See COPYING for details.
 
-Git tree:  https://github.com/decryp2kanon/sugarmaker
+Git tree:  https://github.com/yentencoin/yenten-arm-miner-yespowerr16
 
 ### Build dependencies:
 ```
@@ -51,30 +57,22 @@ Run `sugarmaker --help` to see options. You can solo-mine using these options:
 
 - Mainnet (Solo)
 ```
-./sugarmaker -o http://127.0.0.1:34229 -u ユーザーネーム -p パスワード --coinbase-addr=sugar1qv0ahzfa2ssu47wes89390sl0jz6g05h0267u8g -t1
+./sugarmaker -a yespowerr16 -o http://127.0.0.1:9982 -u user -p pass --coinbase-addr=wallet_address -t1
 ```
 - Mainnet (Stratum Pool)
 ```
-./sugarmaker -o stratum+tcp://1pool.sugarchain.org:3333 -u sugar1qv0ahzfa2ssu47wes89390sl0jz6g05h0267u8g -t1
-```
-- Testnet (Solo)
-```
-./sugarmaker -o http://127.0.0.1:44229 -u ユーザーネーム -p パスワード --coinbase-addr=tugar1qkvl32hmzvgtwpu7v70k5u0kcv9s4uqy4twjge8 -t1
-```
-- Testnet (Stratum Pool)
-```
-./sugarmaker -o stratum+tcp://1pool-testnet.cryptozeny.com:3333 -u tugar1qkvl32hmzvgtwpu7v70k5u0kcv9s4uqy4twjge8 -t1
+./sugarmaker -a yespowerr16 -o stratum+tcp://cpu-pool.com:63368 -u wallet_address -t1
 ```
 
 (Omit the leading `./` if you're on Windows.)  For the above to work, for solo mining you need
 a *fully-synced node* running locally and with RPC username/password configured,
 
-- e.g. with the below in your `.sugarchain/sugarchain.conf`:
+- e.g. with the below in your `.yenten/yenten.conf`:
 ```
 rpcbind=127.0.0.1
 rpcallowip=127.0.0.0/8
-rpcuser=ユーザーネーム
-rpcpassword=パスワード
+rpcuser=user
+rpcpassword=pass
 ```
 
 - Connecting through a proxy:
@@ -89,12 +87,4 @@ rpcpassword=パスワード
 - Pooler <pooler@litecoinpool.org>
 - Alexander Peslyak <solar@openwall.com>
 - Kanon <60179867+decryp2kanon@users.noreply.github.com>
-
-### Support and donation
-If you happy with this sugarmaker, please support devloper for better performance in near future!
-- Kanon (sugarchain developer) https://keybase.io/decryp2kanon
-	* BTC
-		- `1JojGCHLpEVMv6Z28y9gN6jUXtGF2ioEUV` (legacy)
-		- `bc1qqe30mhqdkjfszzc4pex5udvay2ay6w0htgwtax` (bech32)
-	* SUGAR:
-		- `sugar1qv0ahzfa2ssu47wes89390sl0jz6g05h0267u8g`
+- Yentencoin
