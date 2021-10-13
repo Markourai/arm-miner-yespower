@@ -141,7 +141,7 @@ static int opt_retries = -1;
 static int opt_fail_pause = 30;
 int opt_timeout = 0;
 static int opt_scantime = 5;
-static enum algos opt_algo = ALGO_SUGAR_YESPOWER_1_0_1;
+static enum algos opt_algo = ALGO_YTN_YESPOWER_1_0_1;
 static int opt_n_threads;
 static int num_processors;
 static char *rpc_url;
@@ -182,14 +182,14 @@ static char const usage[] = "\
 Usage: " PROGRAM_NAME " [OPTIONS]\n\
 Options:\n\
   -a, --algo=ALGO       specify the algorithm to use\n\
-                          YespowerSugar: Sugarchain (default)\n\
+                          yespowerr16: Yenten (default)\n\
                           YespowerIso:   IsotopeC\n\
                           YespowerNull:  CranePay, Bellcoin, Veco, SwampCoin\n\
                           YespowerUrx:   UraniumX\n\
                           YespowerLitb:  LightBit\n\
                           YespowerIots:  IOTS\n\
                           YespowerItc:   Intercoin\n\
-                          yespowerr16:   Yenten\n\
+                          YespowerSugar:   Sugarchain\n\
                           YespowerMbc:   power2b for MicroBitcoin\n\
   -o, --url=URL         URL of mining server\n\
   -O, --userpass=U:P    username:password pair for mining server\n\
@@ -1894,27 +1894,21 @@ static void signal_handler(int sig)
 
 static void show_credits() {
 	printf("\n");
-	printf("     *** "PACKAGE_NAME" "PACKAGE_VERSION" by Kanon ***\n");
-	printf("     Multi-threaded CPU miner for Sugarchain and other Yespower variants\n");
+	printf("     *** "PACKAGE_NAME" "PACKAGE_VERSION" by Yentencoin ***\n");
+	printf("     Multi-threaded CPU miner for Yenten Coin and other Yespower variants\n");
 	printf("\n");
 	printf("     Authors:\n");
 	printf("     Jeff Garzik          jeff@garzik.org\n");
 	printf("     Pooler               pooler@litecoinpool.org\n");
 	printf("     Alexander Peslyak    solar@openwall.com\n");
 	printf("     Kanon                60179867+decryp2kanon@users.noreply.github.com\n");
-	printf("\n");
-	printf("     Donation to Kanon:\n");
-	printf("     Your support is very helpful to develop better software:)\n");
-	printf("\n");
-	printf("     BTC    1JojGCHLpEVMv6Z28y9gN6jUXtGF2ioEUV\n");
-	printf("     BTC    bc1qqe30mhqdkjfszzc4pex5udvay2ay6w0htgwtax (bech32)\n");
-	printf("     SUGAR  sugar1qv0ahzfa2ssu47wes89390sl0jz6g05h0267u8g\n");
+	printf("     Yentencoin\n");
 	printf("\n");
 	printf("     Download Latest Release:\n");
-	printf("     https://github.com/decryp2kanon/sugarmaker/releases/latest\n");
+	printf("     httpshttps://github.com/yentencoin/yenten-arm-miner-yespowerr16/releases/latest\n");
 	printf("\n");
-	printf("     Bug Report or Question (English, Chinese, Japanese, Korean):\n");
-	printf("     https://github.com/decryp2kanon/sugarmaker/issues\n");
+	printf("     Bug Report or Question (English, Chinese, Japanese, Korean, Russian):\n");
+	printf("     https://github.com/yentencoin/yenten-arm-miner-yespowerr16/issues\n");
 	printf("\n");
 }
 
