@@ -10,9 +10,9 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: 1 Get libcurl-dev package
-      run: cd deps-linux64/
+      run: cd deps-linux64/ && ls
     - name: 11
-      run: ls
+      run: cd deps-linux64 && ls
     - name: 2
       run: chmod +x ./deps-linux64.sh && ./deps-linux64.sh
     - name: 3
