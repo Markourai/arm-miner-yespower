@@ -14,9 +14,9 @@ sudo make install
 cd ..
 
 ## CURL
-wget https://github.com/curl/curl/releases/download/curl-7_57_0/curl-7.57.0.tar.gz
-tar -xvzf curl-7.57.0.tar.gz
-cd curl-7.57.0/
+wget https://github.com/curl/curl/archive/refs/tags/curl-7_79_1.tar.gz
+tar -xvzf curl-7_79_1.tar.gz
+cd curl-7_79_1/
 ./buildconf | grep "buildconf: OK"
 ./configure --disable-shared | grep "Static=yes"
 make -j$(nproc)
