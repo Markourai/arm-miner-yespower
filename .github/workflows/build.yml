@@ -9,8 +9,12 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Get libcurl-dev package
-      run: sudo apt-get install libcurl4-openssl-dev
+    - name: 1 Get libcurl-dev package
+      run: cd deps-linux64/
+    - name: 2
+      run: ./deps-linux64.sh
+    - name: 3
+      run: cd ..
     - name: Set-up autoconf
       run: chmod +x ./autogen.sh && ./autogen.sh
     - name: configure
