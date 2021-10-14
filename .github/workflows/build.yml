@@ -8,18 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Get release
-      id: get_release
-      uses: bruceadams/get-release@v1.2.3
-      env:
-        GITHUB_TOKEN: ${{ github.token }}
     - uses: actions/checkout@v1
     - name: Get libcurl-dev package
       run: sudo apt-get install libcurl4-openssl-dev
     - name: Set-up autoconf
       run: chmod +x ./autogen.sh && ./autogen.sh
     - name: configure
-      run: chmod +x ./configure && ./configure --with-crypto --with-curl
+      run: chmod +x ./configure && ./configure CFLAGS="-Wall -O2 -fomit-frame-pointer" LDFLAGS="-static" CXXFLAGS="$CFLAGS -std=gnu++11" --with-curl=/usr/local/
     - name: make
       run: make
     - name: make check
