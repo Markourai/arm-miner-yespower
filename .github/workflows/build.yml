@@ -9,11 +9,6 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Get release
-      id: get_release
-      uses: yentencoin/yenten-arm-miner-yespowerr16@v2.5.0-test1
-      env:
-        GITHUB_TOKEN: ${{ github.token }}
     - name: Get libcurl-dev package
       run: sudo apt-get install libcurl4-openssl-dev
     - name: Set-up autoconf
@@ -28,6 +23,11 @@ jobs:
       run: ./sugarmaker --help
     - name: Zips
       run: zip --junk-paths cpuminer sugarmaker
+    - name: Get release
+      id: get_release
+      uses: bruceadams/get-release@v1.2.3
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
     - name: Upload Release Asset
       id: upload-release-asset 
       uses: actions/upload-release-asset@v1
