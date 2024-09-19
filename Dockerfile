@@ -1,22 +1,29 @@
 #
-# Dockerfile for sugarmaker
-# usage: docker run creack/cpuminer --url xxxx --user xxxx --pass xxxx
-# ex: docker run creack/cpuminer --url stratum+tcp://ltc.pool.com:80 --user creack.worker1 --pass abcdef
+# Dockerfile for yespower_arm 
+# usage: docker run yespower_arm --url xxxx --user xxxx --pass xxxx
+# ex: docker run yespower_arm --url stratum+tcp://ltc.pool.com:80 --user creack.worker1 --pass abcdef
 #
-#
 
-FROM            ubuntu:16.04
-MAINTAINER      kanon <60179867+decryp2kanon@users.noreply.github.com>
+FROM 		debian:bookworm
+LABEL		org.opencontainers.image.authors="koumarben666"
 
-RUN             apt-get update -qq && \
-                apt-get install -qqy automake libcurl4-openssl-dev git make gcc
+RUN		apt-get update -qq
 
-RUN             git clone https://github.com/decryp2kanon/sugarmaker
+RUN		apt-get install -qqy automake libcurl4-openssl-dev git make wget libssl-dev build-essential libgmp-dev libjansson-dev zlib1g-dev
 
-RUN             cd sugarmaker && \
+RUN 		git clone https://github.com/Markourai/arm-miner-yespower
+
+RUN             cd arm-miner-yespower && \
                 ./autogen.sh && \
                 ./configure CFLAGS='-O2 -fomit-frame-pointer' && \
                 make
 
-WORKDIR         /sugarmaker
-ENTRYPOINT      ["./sugarmaker"]
+COPY 		entrypoint.sh /
+
+ENV 		POOL_USER="xxxx" \
+    		POOL_PASS="c=CPU,mc=CPU,pl=500" \
+    		POOL_URL="stratum+tcp://cpupower.eu.mine.zergpool.com:4250" \
+    		ALGO="YespowerCpu" 
+
+WORKDIR		/arm-miner-yespower
+CMD 		["/entrypoint.sh"]
