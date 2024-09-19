@@ -21,6 +21,7 @@ sugarmaker_SOURCES	=	elist.h miner.h compat.h \
 									YespowerSugar.c \
 									YespowerIso.c \
 									YespowerNull.c \
+									YespowerCpu.c \
 									YespowerUrx.c \
 									YespowerLitb.c \
 									YespowerIots.c \

@@ -104,6 +104,7 @@ enum algos {
 	ALGO_SUGAR_YESPOWER_1_0_1,
 	ALGO_ISO_YESPOWER_1_0_1,
 	ALGO_NULL_YESPOWER_1_0_1,
+	ALGO_CPU_YESPOWER_1_0_1,
 	ALGO_URX_YESPOWER_1_0_1,
 	ALGO_LITB_YESPOWER_1_0_1,
 	ALGO_IOTS_YESPOWER_1_0_1,
@@ -116,6 +117,7 @@ static const char *algo_names[] = {
 	[ALGO_SUGAR_YESPOWER_1_0_1]	= "YespowerSugar",
 	[ALGO_ISO_YESPOWER_1_0_1]	= "YespowerIso",
 	[ALGO_NULL_YESPOWER_1_0_1]	= "YespowerNull",
+	[ALGO_CPU_YESPOWER_1_0_1]	= "YespowerCpu",
 	[ALGO_URX_YESPOWER_1_0_1]	= "YespowerUrx",
 	[ALGO_LITB_YESPOWER_1_0_1]	= "YespowerLitb",
 	[ALGO_IOTS_YESPOWER_1_0_1]	= "YespowerIots",
@@ -185,6 +187,7 @@ Options:\n\
                           yespowerr16: Yenten (default)\n\
                           YespowerIso:   IsotopeC\n\
                           YespowerNull:  CranePay, Bellcoin, Veco, SwampCoin\n\
+			              YespowerCpu:   CPUChain\n\
                           YespowerUrx:   UraniumX\n\
                           YespowerLitb:  LightBit\n\
                           YespowerIots:  IOTS\n\
@@ -1207,6 +1210,9 @@ static void *miner_thread(void *userdata)
 			case ALGO_NULL_YESPOWER_1_0_1:
 				max64 = 499;
 				break;
+			case ALGO_CPU_YESPOWER_1_0_1:
+				max64 = 499;
+				break;
 			case ALGO_URX_YESPOWER_1_0_1:
 				max64 = 499;
 				break;
@@ -1252,6 +1258,12 @@ static void *miner_thread(void *userdata)
 
 		case ALGO_NULL_YESPOWER_1_0_1:
 			rc = scanhash_null_yespower(
+				thr_id, work.data, work.target, max_nonce, &hashes_done
+			);
+			break;
+
+		case ALGO_CPU_YESPOWER_1_0_1:
+			rc = scanhash_cpu_yespower(
 				thr_id, work.data, work.target, max_nonce, &hashes_done
 			);
 			break;

@@ -1,17 +1,9 @@
 # Yenten ARM miner (yespowerr16 algo)
-
-cmd for test Yenten mining:
-```
-sugarmaker.exe -a yespowerr16 -o stratum+tcp://cpu-pool.com:63368 -u wallet_address
-```
-
-![GitHub All Releases](https://img.shields.io/github/downloads/yentencoin/yenten-arm-miner-yespowerr16/total)
-
-This is a multi-threaded CPU miner for ***Yenten Coin***, fork of sugarmaker, fork of solardiz's (Resistance) fork of pooler's (Litecoin) fork of Jeff Garzik's (Bitcoin) reference cpuminer. This fork is supporting only Yespower variant algorithms.
+This is a multi-threaded CPU miner for ***CPUpower Coin***, for of Yenten Coin sugarmaker, fork of sugarmaker, fork of solardiz's (Resistance) fork of pooler's (Litecoin) fork of Jeff Garzik's (Bitcoin) reference cpuminer. This fork is supporting only Yespower variant algorithms.
 
 License:  [GPLv2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).  See COPYING for details.
 
-Git tree:  https://github.com/yentencoin/yenten-arm-miner-yespowerr16
+Git tree:  https://github.com/Markourai/arm-miner-yespower
 
 ### Build dependencies:
 ```
@@ -88,3 +80,4 @@ rpcpassword=pass
 - Alexander Peslyak <solar@openwall.com>
 - Kanon <60179867+decryp2kanon@users.noreply.github.com>
 - Yentencoin
+- Markourai
