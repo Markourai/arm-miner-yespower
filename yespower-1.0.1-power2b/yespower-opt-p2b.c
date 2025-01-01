@@ -99,7 +99,7 @@
 #include "sysendian-p2b.h"
 
 #include "yespower-p2b.h"
-
+#include "blake2b.h"
 #include "yespower-platform-p2b.c"
 
 #if __STDC_VERSION__ >= 199901L
