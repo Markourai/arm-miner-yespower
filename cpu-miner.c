@@ -125,7 +125,7 @@ static const char *algo_names[] = {
 	[ALGO_ITC_YESPOWER_1_0_1]	= "YespowerItc",
 	[ALGO_YTN_YESPOWER_1_0_1]	= "yespowerr16",
 	[ALGO_MBC_YESPOWER_1_0_1]	= "YespowerMbc",
-        [ALGO_TDC_YESPOWER_1_0_1]	= "YespowerTdc",
+    [ALGO_TDC_YESPOWER_1_0_1]	= "YespowerTdc",
 };
 
 bool opt_debug = false;
@@ -196,6 +196,7 @@ Options:\n\
                           YespowerItc:   Intercoin\n\
                           YespowerSugar:   Sugarchain\n\
                           YespowerMbc:   power2b for MicroBitcoin\n\
+						  YespowerTdc:  Tidecoin\n\
   -o, --url=URL         URL of mining server\n\
   -O, --userpass=U:P    username:password pair for mining server\n\
   -u, --user=USERNAME   username for mining server\n\
