@@ -1918,8 +1918,8 @@ static void signal_handler(int sig)
 
 static void show_credits() {
 	printf("\n");
-	printf("     *** "PACKAGE_NAME" "PACKAGE_VERSION" by Yentencoin ***\n");
-	printf("     Multi-threaded CPU miner for Yenten Coin and other Yespower variants\n");
+	printf("     *** "PACKAGE_NAME" "PACKAGE_VERSION" by Markourai ***\n");
+	printf("     Multi-threaded CPU miner for Yespower variants\n");
 	printf("\n");
 	printf("     Authors:\n");
 	printf("     Jeff Garzik          jeff@garzik.org\n");
@@ -1927,12 +1927,13 @@ static void show_credits() {
 	printf("     Alexander Peslyak    solar@openwall.com\n");
 	printf("     Kanon                60179867+decryp2kanon@users.noreply.github.com\n");
 	printf("     Yentencoin\n");
+	printf("     Markourai\n");
 	printf("\n");
 	printf("     Download Latest Release:\n");
-	printf("     httpshttps://github.com/yentencoin/yenten-arm-miner-yespowerr16/releases/latest\n");
+	printf("     https://github.com/Markourai/arm-miner-yespower\n");
 	printf("\n");
 	printf("     Bug Report or Question (English, Chinese, Japanese, Korean, Russian):\n");
-	printf("     https://github.com/yentencoin/yenten-arm-miner-yespowerr16/issues\n");
+	printf("     https://github.com/Markourai/arm-miner-yespower/issues\n");
 	printf("\n");
 }
 
