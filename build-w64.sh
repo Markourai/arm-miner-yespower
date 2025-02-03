@@ -15,7 +15,7 @@ make
 strip -p --strip-debug --strip-unneeded sugarmaker.exe
 
 # PACKAGE
-RELEASE=sugarmaker-v2.5.0-sugar4-w64
+RELEASE=sugarmaker-v2.5.0-yespower-w64
 rm -rf $RELEASE
 mkdir $RELEASE
 

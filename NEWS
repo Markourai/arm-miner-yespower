@@ -1,3 +1,9 @@
+Version 2.5.0-yespower - February 2, 2025
+- Add other Yespower coins
+  * YespowerTdc: Tidecoin
+  * Yespowerr16: Yenten
+- Fix MacOS apple silicon compilation
+
 Version 2.5.0-sugar4 - March 23, 2020
 
 - Performance improves on Yespower
